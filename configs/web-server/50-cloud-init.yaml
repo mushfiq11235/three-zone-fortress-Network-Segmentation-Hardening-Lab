@@ -1,0 +1,13 @@
+# /etc/netplan/50-cloud-init.yaml on the DMZ web server (dmz-web)
+# Static address in the DMZ. The gateway and DNS server are the OPNsense DMZ port.
+# Apply with: sudo chmod 600 /etc/netplan/50-cloud-init.yaml && sudo netplan apply
+network:
+  version: 2
+  ethernets:
+    ens33:
+      addresses: [10.10.20.10/24]
+      routes:
+        - to: default
+          via: 10.10.20.1
+      nameservers:
+        addresses: [10.10.20.1]

@@ -1,0 +1,20 @@
+# Never commit raw exports, keys or VM files
+config-OPNsense*.xml
+*.pem
+*.key
+*.crt
+*.vmdk
+*.vmx
+*.vmem
+*.vmsn
+*.iso
+*.7z
+*.ova
+*.ovf
+
+# Personal notes can contain credentials
+notes/
+*.notes.txt
+
+.DS_Store
+Thumbs.db
